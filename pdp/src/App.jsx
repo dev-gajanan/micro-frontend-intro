@@ -1,6 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
+import {BrowserRouter as Router, Route, Routes} from 'react-router-dom';
 
 import "./index.scss";
 import Header from "home/Header";
@@ -12,9 +12,9 @@ const App = () => (
     <div className="text-3xl mx-auto max-w-6xl">
       <Header />
       <div className="my-10">
-        <Switch>
-          <Route path="/products/:id" component={ProductDetails} />
-        </Switch>
+        <Routes>
+          <Route path="/products/:id" element={<ProductDetails />} />
+        </Routes>
       </div>
       <Footer />
     </div>
